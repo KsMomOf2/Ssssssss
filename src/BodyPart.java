@@ -1,16 +1,14 @@
 import javax.swing.JLabel;
-import java.awt.Graphics;
-import javax.swing.ImageIcon;
 import java.awt.Point;
 
 public class BodyPart extends JLabel {
 
-public static String filename = "HackBI_50.png";
 private Point point;
+private String type;
 
 BodyPart(int row, int col) {
-  setIcon( new ImageIcon(filename));
   point = new Point(col, row); 
+  type = "body";  // Eventually this needs to create head, body, or tail
 }
 
 public int getCol() {
@@ -21,10 +19,21 @@ public int getRow() {
   return (int) point.getY();
 }
 
+public Point getPoint() {
+  return point;
+}
+
+public void setPoint(Point p) {
+  point = p;
+  }
+
+public String getType() {
+  return type;
+}
+
 public String toString() {
-  String start = super.toString();
-  ImageIcon icon = (ImageIcon) getIcon();
-  String result = point + " " + getText() + "\n" + icon;
+ // String start = super.toString();
+  String result = String.format("{%s (%d, %d)}", type, getRow(), getCol());
   return result;
 }
 
