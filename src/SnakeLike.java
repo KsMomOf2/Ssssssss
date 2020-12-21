@@ -24,34 +24,34 @@ SnakeLike() {
 
 private void createFrame() {
   setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-  setLocationRelativeTo(null);
+  setLocation(200,200);
+ // setLocationRelativeTo(null);
   setSize(800, 700);
  }
  
  private JPanel createFooter() {
-   JPanel panel = new JPanel();
-   panel.setLayout(new GridLayout (3, 3));
    JButton north = new JButton("^");
    north.addActionListener(createMovementListener('n'));
    JButton south = new JButton("v");
    south.addActionListener(createMovementListener('s'));
-   JButton stay = new JButton("\0");
+   JButton stay = new JButton("move");
    stay.addActionListener(createMovementListener('\0'));
    JButton east = new JButton(">");
    east.addActionListener(createMovementListener('e'));
    JButton west = new JButton("<");
    west.addActionListener(createMovementListener('w'));
    
-   JButton empty = new JButton();
-   panel.add(empty);
+   JPanel panel = new JPanel();
+   panel.setLayout(new GridLayout (3, 3));
+   panel.add(new JButton());
    panel.add(north);
-   panel.add(empty);
+   panel.add(new JButton());
    panel.add(west);
    panel.add(stay);
    panel.add(east);
-   panel.add(empty);
+   panel.add(new JButton());
    panel.add(south);
-   panel.add(empty);
+   panel.add(new JButton());
    
    return panel;
    }
