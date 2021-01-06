@@ -11,11 +11,13 @@ public class Space extends JLabel {
    private static String bodyFilename = "Body_50.png";
    private static String headFilename = "HackBI_50.png";
    private static String tailFilename = "HackBI_50.png";
+   private static String appleFilename = "Apple_50.png";
 
    private static ImageIcon blankImage = new ImageIcon(blankFilename);
    private static ImageIcon bodyImage = new ImageIcon(bodyFilename);
    private static ImageIcon tailImage = new ImageIcon(tailFilename);
    private static ImageIcon headImage = new ImageIcon(headFilename);
+   private static ImageIcon appleImage = new ImageIcon(appleFilename);
 
    private Point point; // Not sure this is going to be important, but perhaps where the space is in the matrix
                      // so that it can be properly drawn in paintComponent

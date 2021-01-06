@@ -17,11 +17,13 @@ s#n0classes
 s#p0doc
 s#q0test
 s#w0canvas
-!69;g
+!90;g
 %\011src%sBodyPart.java
 %\011src%sGame.java
 %\011src%sSnakeLike.java
-!69;f
+%\011src%sSpace.java
+!90;f
 %\011src%sBodyPart.java
 %\011src%sGame.java
 %\011src%sSnakeLike.java
+%\011src%sSpace.java
